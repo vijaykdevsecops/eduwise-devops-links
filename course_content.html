@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Widely Used DevOps Tools - Default Ports</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #444;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .category {
+      background-color: #ddd;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Widely Used DevOps Tools - Default Ports</h1>
+
+  <table>
+    <tr><th>Category</th><th>Tool</th><th>Default Port(s)</th><th>Purpose</th></tr>
+    <tr class="category"><td rowspan="3">CI/CD</td><td>Jenkins</td><td>8080 (HTTP), 50000 (agent comms)</td><td>Automation server</td></tr>
+    <tr><td>GitLab</td><td>80 (HTTP), 443 (HTTPS), 22 (SSH)</td><td>Git repo + CI/CD</td></tr>
+    <tr><td>Travis CI</td><td>Integrated with GitHub</td><td>No fixed port</td></tr>
+
+    <tr class="category"><td>Version Control</td><td>Git</td><td>22 (SSH), 443 (HTTPS)</td><td>Secure repo access</td></tr>
+
+    <tr class="category"><td rowspan="3">Containerization</td><td>Docker</td><td>2375 (unencrypted), 2376 (TLS)</td><td>Docker API</td></tr>
+    <tr><td>Kubernetes</td><td>6443 (API server), 10250 (Kubelet), 10255 (read-only)</td><td>Cluster management</td></tr>
+    <tr><td>OpenShift</td><td>8443</td><td>API server</td></tr>
+
+    <tr class="category"><td rowspan="7">Monitoring & Logging</td><td>Prometheus</td><td>9090</td><td>Metrics + alerting</td></tr>
+    <tr><td>Grafana</td><td>3000</td><td>Dashboards</td></tr>
+    <tr><td>Elasticsearch</td><td>9200 (HTTP), 9300 (Transport)</td><td>Search/analytics</td></tr>
+    <tr><td>Logstash</td><td>5044 (Beats), 5000 (Forwarder)</td><td>Log pipeline</td></tr>
+    <tr><td>Kibana</td><td>5601</td><td>Visualization</td></tr>
+    <tr><td>Nagios</td><td>5666 (NRPE), 80/443 (Web UI)</td><td>Monitoring</td></tr>
+    <tr><td>Zabbix</td><td>10051 (server), 10050 (agent)</td><td>Monitoring</td></tr>
+
+    <tr class="category"><td rowspan="2">Artifact Management</td><td>Nexus</td><td>8081 (HTTP), 8443 (HTTPS)</td><td>Repo manager</td></tr>
+    <tr><td>Artifactory</td><td>8081 (HTTP), 443 (HTTPS)</td><td>Artifact storage</td></tr>
+
+    <tr class="category"><td rowspan="3">Config Mgmt</td><td>Puppet</td><td>8140</td><td>Puppet Master</td></tr>
+    <tr><td>Chef</td><td>443</td><td>Chef server</td></tr>
+    <tr><td>Ansible</td><td>Uses SSH (22) or WinRM</td><td>No fixed port</td></tr>
+
+    <tr class="category"><td>Secrets Mgmt</td><td>Vault</td><td>8200 (HTTP), 8201 (cluster comms)</td><td>Secrets storage</td></tr>
+
+    <tr class="category"><td rowspan="4">Other Infra Tools</td><td>Consul</td><td>8500 (HTTP API), 8600 (DNS)</td><td>Service discovery</td></tr>
+    <tr><td>Terraform</td><td>CLI-based</td><td>No fixed port</td></tr>
+    <tr><td>Maven</td><td>CLI-based</td><td>No fixed port</td></tr>
+    <tr><td>Istio</td><td>15000–15090 range</td><td>Service mesh</td></tr>
+  </table>
+</body>
+</html>
